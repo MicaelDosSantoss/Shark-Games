@@ -10,175 +10,12 @@ body {
   margin: 0pc;
 }
 
-
-/*HEADER*/
-header {
+main {
   width: 100%;
-  height: 100px;
-  background-color: #696A77;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: relative;
-  z-index: 1;
-}
-
-#containerHeader {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 42px;
-}
-
-#barraDePesquisa{
-  width: 638px;
-  height: 30px;
-  background: #C4C4C4;
-  opacity: 0.6;
-  border: 1px solid #868686;
-  border-radius: 15px;
-  padding-left: 15px;
-  color: black;
-}
-
-::placeholder {
-  font-family: 'Monda', sans-serif;
-  font-size: 12px;
-  line-height: 18px;
-  color: rgba(65, 65, 65, 0.79);
-  position: relative;
-  bottom: 1px;
-}
-
-#barraDePesquisa:hover {
-  background-color: #bdbdbd;
-  border: 2px solid #838383;
-  transition: border 0.05s, background-color 1s;
-}
-
-.pesquisaOpcoes {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.linhaCategoria {
-  width: 664px;
-  height: 2px;
-  background-color: #595959;
-  margin-top: 9.5px;
-  margin-bottom: 7.5px;
-}
-
-ol {
-  list-style: none;
-  display: flex;
-}
-
-.opcoes {
-  width: 572px;
-  height: 27px;
-  justify-content: space-between;
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-
-.opcoes > li {
-  font-family: 'Monda', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
-}
-
-.informeCep {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.informeCep > span {
-  font-family: 'Pinyon Script', cursive;
-  font-size: 36px;
-  line-height: 45px;
-}
-
-.informeCep > .informe {
-  font-size: 16px;
-  line-height: 16px;
-}
-
-.informeCep > p {
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 0px;
-  font-size: 20px;
-  line-height: 21px;
-}
-
-.perfil{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#cadastroEperfil {
-  width: 258px;
-  height: 29px;
-  justify-content: space-between;
-  margin-bottom: 0px;
-  padding-left: 0px;
-  margin-top: 2.5px;
-}
-
-#cadastroEperfil > li {
-  font-family: 'Monda', sans-serif;
-  font-size: 18px;
-  line-height: 29px;
-}
-
-.barraCadastro{
-  width: 321px;
-  height: 39px;
-  background-color: #464646;
-  margin-bottom: 2.5px;
-}
-/*HEADER*/
-
-/*FOOTER/*/
-footer {
-  background-color: #393939;
-  width: 100%;
-  display: flex;
-  padding-left: 74px;
-  margin-right: 160px;
-  align-items: center;
-}
-
-#endereco > p {
-  margin: 0px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 19px;
-  color: #B1B1B1;
-  font-weight: 600;
-}
-
-
-#opcoesDeContato {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding-right: 300px;
-}
-
-.informacoesFooter {
-  margin: 15px 0px;
-  margin-left: 30px;
-}
-/*FOOTER/*/
-
-
 
 .caixaDoCarrinho {    width: 1054px;
   height: 200px;
@@ -205,25 +42,21 @@ footer {
   width: 981.64px;
   height: 120px;
   border: none;
-  background-color: #6A6A6A;
+  background-color: #595c63;
   border-radius: 15px ;
   outline: none;
 
 }
 
 #botaoDeAdicionarAoCarrinho:hover{
-  transition-duration: 0.5s;
-  background-color: #177D94;
-  border: 3px solid #177777;
-}
-
-#realizarCompra{
-  width: 281px;
+  transition-duration: 0.25s;
+  background-color: #4e5157;
+  border: 1px solid #333333;
 }
 
 #realizarCompra:hover {
-  transition-duration: 2s;
-  background-color: blue;
+  transition-duration: 0.25s;
+  background-color: rgb(122, 122, 122);
 }
 
  alinhar {
@@ -234,28 +67,28 @@ footer {
 
 .precoReal {
   font-size: 29px;
-  color: #222222;
-  margin-left: 20px;
+  color: #e9e9e9;
 }
 
 .precosComDesconto{
   font-size: 29px;
-  color: #C0C0C0;
+  color: #ffffff;
 }
 
 #realizarCompra{
-width: 281px;
+  width: 281px;
   height: 79px;
   border: none;
   border-radius: 15px;
   background-color: #828282;
-}
-
-#realizarCompra:hover {
-  transition-duration: 2s;
-  background-color: blue;
+  font-size: 23px;
 }
 
 .justify-content-between {
   padding: 0px 60px;
+}
+
+.dinheiroBrasil {
+  font-size: 29px;
+  color: #5ef268;
 }
