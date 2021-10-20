@@ -8,5 +8,8 @@ router.get('/cadastro', indexController.cadastro)
 router.get('/carrinho', indexController.carrinho)
 router.get('/item', indexController.item)
 router.get('/opcoes-entrega', indexController.OpcoesEntrega)
+router.post('/cadastro', indexController.cadastrar)
+router.get('/cadastro/produto', indexController.cadastroDeProduto)
+router.post('/cadastro/produto', indexController.novoProduto)
 
 module.exports = router
