@@ -1,31 +1,7 @@
-const Usuarios = [{
-    id : null,
-    nome:"Micael",
-    sobrenome:"Santos",
-    email:"12345@gmail.com",
-    telefone:89234823,
-    cpf:"126.234.555-12",
-    senha:1020,
-    senhaConfirmar:1020,
-    dia: 21,
-    mes: 6,
-    ano: 2004,
-    cep:"08459-567",
-    endereco:"nsei",
-    numero:123,
-    bairro:"VilaAriozona",
-    referencia: "perto de um lugar",
-    cidade:"kemel",
-    estado: 'SP',
+const fs = require('fs')
+const { v4: uuid } = require('uuid');
 
-}]
 
-const  produtos  =  [
-  {  /*id : uuid ( ) , */ nome : "Placa de Video" ,  valor : 400 , desconto: 20,  img : '/images/Teste-01.jpg'  },
-  {  /*id : uuid ( ) , */ nome : "Placa de Video" ,  valor : 400 , desconto: 20,  img : '/images/Teste-02.jpg'  },
-  {  /*id : uuid ( ) , */ nome : "Placa de Video" ,  valor : 400 , desconto: 20,  img : '/images/Teste-03.jpg'  },
-  {  /*id : uuid ( ) , */ nome : "Placa de Video" ,  valor : 400 , desconto: 20,  img : '/images/Teste-04.jpg'  },    
-]
 
 const indexController = {
     index: (req, res) => {
@@ -46,41 +22,40 @@ const indexController = {
     OpcoesEntrega:(req,res) => {
       return res.render("TelaDeVendas/opcoesDeEntrega")
     },
-    cadastroDeProduto: (req, res) => {
+    pageProduto: (req, res) => {
       res.render('cadastroProduto')
     },
     novoProduto: (req, res) => {
-      let { nome, valor } = req.body
-      produtos.push({nome, valor: Number(valor)})
-      console.log(produtos)
+      let content = fs.readFileSync("./json/db.json", "utf8")
+      let db = JSON.parse(content)
+
+      let { nome, valor, descricao } = req.body
+      db.usuarios.push({nome, valor: Number(valor), descricao})
+  
+      content = JSON.stringify(db)
+
+      fs.writeFileSync("./json/db.json", content, "utf-8")
       res.redirect("/home")
     },
+    
     cadastrar: (req,res) => {
-      Usuarios.push( 
-      id,
-      nome,
-      sobrenome,
-      email,
-      telefone,
-      cpf,
-      senha,
-      senhaConfirmar,
-      dia,
-      mes,
-      ano,
-      cep,
-      endereco,
-      numero,
-      bairro,
-      referencia,
-      cidade,
-      estado,
-      )/*,
-      atualizarProduto:(req, res) => {
-         const  { nome , valor }
-      }*/
+
+      let content = fs.readFileSync("./json/db.json", "utf8")
+      let db = JSON.parse(content)
+      
+
+      const { id,nome,sobrenome,email,telefone,cpf,senha,senhaConfirmar,dia,mes,ano,cep,endereco,numero,bairro,referencia,cidade,estado } = req.body ;
+
+    db.usuarios.push( {id: uuid(),nome,sobrenome,email,telefone,cpf,senha,senhaConfirmar,dia,mes,ano,cep,endereco,numero,bairro,referencia,cidade,estado})
+
+    content = JSON.stringify(db)
+
+    fs.writeFileSync("./json/db.json", content, "utf-8")
+
+      return  res.json(db.usuarios)  
     }
+
 
 };
 
-module.exports = indexController
+module.exports = indexController;
