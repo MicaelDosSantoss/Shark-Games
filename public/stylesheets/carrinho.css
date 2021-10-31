@@ -17,13 +17,14 @@ main {
   align-items: center;
 }
 
-.caixaDoCarrinho {    width: 1054px;
-  height: 200px;
-  margin: 30px;
+.caixaDoCarrinho {    
+  width: 900px;
+  height: 110px;
+  margin: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-radius: 20px;
+  border-radius: 5px;
   background-color: #72757B;
 }
 
@@ -34,18 +35,17 @@ main {
 
 .imagemCarrinhoCortado{
   display: flex;
-  
   justify-content: center;
 }
 
 #botaoDeAdicionarAoCarrinho {
-  width: 981.64px;
-  height: 120px;
+  width: 324.64px;
+  height: 58px;
   border: none;
   background-color: #595c63;
   border-radius: 15px ;
   outline: none;
-
+  margin-bottom: 32.5px;
 }
 
 #botaoDeAdicionarAoCarrinho:hover{
@@ -66,29 +66,51 @@ main {
 }
 
 .precoReal {
-  font-size: 29px;
-  color: #e9e9e9;
+  margin: 0;
+  font-size: 12px;
+  color: #E15252;
+  text-decoration: line-through;
 }
 
 .precosComDesconto{
-  font-size: 29px;
-  color: #ffffff;
+  font-size: 28px;
+  line-height: 33px;
+  color: #52DD58;
 }
 
 #realizarCompra{
-  width: 281px;
-  height: 79px;
+  width: 210px;
+  height: 60px;
   border: none;
   border-radius: 15px;
   background-color: #828282;
-  font-size: 23px;
+  font-size: 20px;
+  margin: 32.5px 0 40px;
+}
+
+#desconto {
+  margin: 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #9efd8e;
 }
 
 .justify-content-between {
   padding: 0px 60px;
 }
 
-.dinheiroBrasil {
-  font-size: 29px;
-  color: #5ef268;
+
+.caixaDoCarrinho > div > img {
+  width: 66.94px; 
+  height: 71.77px;
+}
+
+.nomeDoProduto {
+  font-size: 26px;
+  font-weight: 400px;
+}
+
+.compras {
+  margin-top: 30px;    
 }
