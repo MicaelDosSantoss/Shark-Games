@@ -12,13 +12,13 @@ body {
 
 /*MAIN*/
 main {
-  background-color: #6C6C6C;
+  background-color: #1F2937;
 }
 
 #mainCadastro {
   background-color: #1F2937;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 } 
 
 .inputCadastro {
@@ -31,19 +31,22 @@ main {
 }
 
 .inputSeparar{
-  margin: 20px;
+  margin: 15px 6px;
 }
 
 .InputSelection {
   color: #222222;
   width: 190px;
- background-color: #C4CEDB;
- border: none;
- outline: none;
- border-radius: 20px ;
+  height: 44.48px;
+  background-color: #C4CEDB;
+  border: none;
+  outline: none;
+  border-radius: 20px ;
 }
 
-
+label {
+  margin-right: 10px;
+}
 
 .inform1{
     margin: 10px;
@@ -85,6 +88,7 @@ main {
 
 .inputCidade { 
  width: 227px;
+ height: 44.48px;
  background-color: #C4CEDB;
  border: none;
  outline: none;
